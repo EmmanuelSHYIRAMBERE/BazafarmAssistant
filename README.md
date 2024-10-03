@@ -1,155 +1,161 @@
-# 📄 Document Buddy App
+# 🌾 BAZAFARM Technology Assistant
 
-![Document Buddy App](sct.png)
-
-**Document Buddy App** is a powerful Streamlit-based application designed to simplify document management. Upload your PDF documents, create embeddings for efficient retrieval, and interact with your documents through an intelligent chatbot interface. 🚀
+**BAZAFARM Technology Assistant** is a powerful web-based application designed to revolutionize farming through IoT and data analysis. Upload your farm data, create embeddings for efficient retrieval, and interact with your agricultural information through an intelligent Farm Assistant interface. 🚀
 
 ## 🛠️ Features
 
-- **📂 Upload Documents**: Easily upload and preview your PDF documents within the app.
-- **🧠 Create Embeddings**: Generate embeddings for your documents to enable efficient search and retrieval.
-- **🤖 Chatbot Interface**: Interact with your documents using a smart chatbot that leverages the created embeddings.
-- **📧 Contact**: Get in touch with the developer or contribute to the project on GitHub.
+- **📊 Upload Farm Data**: Easily upload and preview your PDF documents containing farm data within the app.
+- **🧠 Data Processing**: Generate embeddings for your farm documents to enable efficient search and retrieval.
+- **🤖 Farm Assistant Interface**: Interact with your agricultural data using a smart chatbot that leverages the created embeddings.
+- **🌡️ Real-time Monitoring**: View and analyze data on water levels, soil temperature, and fertility.
+- **☀️ Solar-Powered**: Utilizes solar energy for sustainable operation in the field.
+- **🌤️ Weather Forecasts**: Access weather predictions to make informed farming decisions.
+- **📱 Mobile Access**: View your farm data on mobile devices, tablets, or PCs via Internet.
+- **📧 Contact**: Get in touch with STES GROUP Ltd or contribute to the project on GitHub.
 - **🌟 User-Friendly Interface**: Enjoy a sleek and intuitive UI with emojis and responsive design for enhanced user experience.
 
 ## 🖥️ Tech Stack
 
-The Document Buddy App leverages a combination of cutting-edge technologies to deliver a seamless and efficient user experience. Here's a breakdown of the technologies and tools used:
+The BAZAFARM Technology App leverages a combination of cutting-edge technologies to deliver a seamless and efficient farming experience. Here's a breakdown of the technologies and tools used:
 
-- **[LangChain](https://langchain.readthedocs.io/)**: Utilized as the orchestration framework to manage the flow between different components, including embeddings creation, vector storage, and chatbot interactions.
-  
-- **[Unstructured](https://github.com/Unstructured-IO/unstructured)**: Employed for robust PDF processing, enabling the extraction and preprocessing of text from uploaded PDF documents.
-  
-- **[BGE Embeddings from HuggingFace](https://huggingface.co/BAAI/bge-small-en)**: Used to generate high-quality embeddings for the processed documents, facilitating effective semantic search and retrieval.
-  
-- **[Qdrant](https://qdrant.tech/)**: A vector database running locally via Docker, responsible for storing and managing the generated embeddings for fast and scalable retrieval.
-  
-- **[LLaMA 3.2 via Ollama](https://ollama.com/)**: Integrated as the local language model to power the chatbot, providing intelligent and context-aware responses based on the document embeddings.
-  
-- **[Streamlit](https://streamlit.io/)**: The core framework for building the interactive web application, offering an intuitive interface for users to upload documents, create embeddings, and interact with the chatbot.
+- **[LangChain](https://langchain.readthedocs.io/)**: Utilized as the orchestration framework to manage the flow between different components, including embeddings creation, vector storage, and Farm Assistant interactions.
+- **[Unstructured](https://github.com/Unstructured-IO/unstructured)**: Employed for robust PDF processing, enabling the extraction and preprocessing of text from uploaded farm data documents.
+- **[BGE Embeddings from HuggingFace](https://huggingface.co/BAAI/bge-small-en)**: Used to generate high-quality embeddings for the processed documents, facilitating effective semantic search and retrieval of agricultural information.
+- **[Qdrant](https://qdrant.tech/)**: A vector database running locally via Docker, responsible for storing and managing the generated embeddings for fast and scalable retrieval of farm data.
+- **[GPT-2 via Hugging Face Transformers](https://huggingface.co/gpt2)**: Integrated as the language model to power the Farm Assistant, providing intelligent and context-aware responses based on the farm data embeddings.
+- **[Streamlit](https://streamlit.io/)**: The core framework for building the interactive web application, offering an intuitive interface for farmers to upload data, process information, and interact with the Farm Assistant.
+
+- **IoT Sensors**: Custom-built sensors for measuring water levels, soil temperature, and fertility in real-time.
+
+- **Solar Panels**: Integrated solar technology for powering the BAZAFARM devices in the field.
 
 ## 📁 Directory Structure
 
-document_buddy_app/
+bazafarm_app/
+
 ```
 │── logo.png
-├── new.py
+├── app.py
 ├── vectors.py
-├── chatbot.py
+├── farm_assistant.py
 ├── requirements.txt
+├── iot_sensors/
+│   ├── water_level.py
+│   ├── soil_temp.py
+│   └── fertility.py
 ```
 
 ## 🚀 Getting Started
 
-Follow these instructions to set up and run the Document Buddy App on your local machine.
+Follow these instructions to set up and run the BAZAFARM Technology App on your local machine.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/AIAnytime/Document-Buddy-App.git
-cd Document-Buddy-App
+git clone https://github.com/STES-GROUP/BAZAFARM-App.git
+cd BAZAFARM-App
+```
 
-2. Create a Virtual Environment
+### 2. Create a Virtual Environment
 
-You can either use Python’s venv or Anaconda to create a virtual environment for managing dependencies.
+You can either use Python's venv or Anaconda to create a virtual environment for managing dependencies.
 
 Option 1: Using venv
 
 On Windows:
 
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
 On macOS and Linux:
 
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
-Option 2: Using Anaconda
+Option 3: Using Anaconda
 
 Follow these steps to create a virtual environment using Anaconda:
 
-	1.	Open the Anaconda Prompt.
-	2.	Create a new environment:
+1. Open the Anaconda Prompt.
+2. Create a new environment:
 
-conda create --name document_buddy python=3.9
+```
+conda create --name bazafarm python=3.9
+```
 
-(Replace document_buddy with your preferred environment name if desired).
+3. Activate the newly created environment:
 
-	3.	Activate the newly created environment:
+```
+conda activate bazafarm
+```
 
-conda activate document_buddy
-
-
-
-3. Install Dependencies
+### 3. Install Dependencies
 
 Once the environment is set up (whether venv or Conda), install the required dependencies using requirements.txt:
 
+```
 pip install -r requirements.txt
+```
 
-4. Run the App
+### 4. Run the App
 
 Start the Streamlit app using the following command:
 
-streamlit run new.py
-
-Note: If your main application file is named differently, replace new.py with your actual file name (e.g., app.py).
-
-This command will launch the app in your default web browser. If it doesn’t open automatically, navigate to the URL provided in the terminal (usually http://localhost:8501).
+```
+streamlit run app.py
 ```
 
-### 🤝 Contributing
+This command will launch the app in your default web browser. If it doesn't open automatically, navigate to the URL provided in the terminal (usually http://localhost:8501).
 
-Contributions are welcome! Whether it’s reporting a bug, suggesting a feature, or submitting a pull request, your input is highly appreciated. Follow these steps to contribute:
+## 🤝 Contributing
 
-1.	Fork the Repository: Click on the “Fork” button at the top-right corner of the repository page.
-2.	Clone Your Fork
-3.	Create a New Branch:
+Contributions are welcome! Whether it's reporting a bug, suggesting a feature, or submitting a pull request, your input is highly appreciated. Follow these steps to contribute:
+
+1. Fork the Repository: Click on the "Fork" button at the top-right corner of the repository page.
+2. Clone Your Fork
+3. Create a New Branch:
 
 ```
 git checkout -b feature/YourFeatureName
 ```
 
-
-4.	Make Your Changes: Implement your feature or fix.
-5.	Commit Your Changes:
+4. Make Your Changes: Implement your feature or fix.
+5. Commit Your Changes:
 
 ```
 git commit -m "Add Your Feature Description"
 ```
 
-
-6.	Push to Your Fork:
+6. Push to Your Fork:
 
 ```
 git push origin feature/YourFeatureName
 ```
 
+7. Create a Pull Request: Navigate to the original repository and create a pull request from your fork.
 
-7.	Create a Pull Request: Navigate to the original repository and create a pull request from your fork.
-
-### 📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
 
-### 📫 Contact
+## 📫 Contact
 
-•	Email: aianytime07@gmail.com ✉️
+- Email: info@stesgroup.rw ✉️
+- Website: [STES GROUP Ltd](https://www.stesgroup.rw) 🌐
 
 Feel free to reach out for any queries, suggestions, or contributions. Your feedback is invaluable!
 
-© 2024 Document Buddy App by AI Anytime. All rights reserved. 🛡️
+© 2024 BAZAFARM TECHNOLOGY by STES GROUP Ltd. All rights reserved. 🛡️
 
-### 🔗 Useful Links
+## 🔗 Useful Links
 
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [LangChain Documentation](https://langchain.readthedocs.io/)
+- [Qdrant Documentation](https://qdrant.tech/documentation/)
+- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers/index)
 
-•	Streamlit Documentation: https://docs.streamlit.io/
-
-•	LangChain Documentation: https://langchain.readthedocs.io/
-
-•	Qdrant Documentation: https://qdrant.tech/documentation/
-
-•	ChatOllama Documentation: https://github.com/langchain-ai/langchain-llms#ollama
-
-Happy coding! 🚀✨
+Happy farming with BAZAFARM! 🌾🚀✨
