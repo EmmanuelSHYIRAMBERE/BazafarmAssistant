@@ -186,7 +186,7 @@ def main():
 
     # Page Router
     if choice == "🏠 Home":
-        st.title("🌾 BAZAFARM TECHNOLOGY")
+        st.title("BAZAFARM TECHNOLOGY")
         st.markdown("""
         Welcome to **BAZAFARM TECHNOLOGY** by STES GROUP Ltd! 🚀
 
