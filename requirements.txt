@@ -6,7 +6,7 @@ python-dotenv
 langchain-huggingface
 langchain-qdrant
 langchain-ollama
-unstructured[pdf]
+unstructured[pdf]z
 onnx==1.16.1
 qdrant-client
 plotly
